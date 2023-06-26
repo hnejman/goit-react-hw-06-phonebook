@@ -20,14 +20,10 @@ const contactsInitialState = value;
 
 export const contactsReducer = (state = contactsInitialState, action) => {
     switch (action.type){
-        case "contacts/add contact":{
-        return  [...state, action.payload]};
-        case "contacts/deleting contact":{
-         console.log(state);
+        case "contacts/add contact": return  [...state, action.payload];
+        case "contacts/deleting contact":
         return state.filter(
-        contact => contact.id !== action.payload)};
-        default : {
-            return state;
-        };
+        contact => contact.id !== action.payload)
+        default : return state;
     };
 }
