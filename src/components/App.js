@@ -1,5 +1,5 @@
 import { ContactsList } from 'components/ContactsList/ContactsList';
-import { Contacts } from './Contacts';
+import { Contacts } from './Form/Form';
 import { Filter } from './Filter/Filter';
 
 export const App = () => {
