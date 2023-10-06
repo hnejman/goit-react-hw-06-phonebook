@@ -8,8 +8,15 @@ export const Contacts = () => {
     event.preventDefault();
     const id = nanoid();
     const form = event.target;
-    localStorage.setItem( id , form.elements.name.value + ":" + form.elements.number.value)
     dispatch(addContact(form.elements.name.value, form.elements.number.value, id));
+    const contact ={
+      id: id,
+      name: form.elements.name.value,
+      number: form. elements.number.value
+    }
+    let contacts = localStorage.getItem("contacts");
+    contacts = [...contacts, contact];
+    localStorage.setItem("contacts", contacts);
     form.reset();
   };
 

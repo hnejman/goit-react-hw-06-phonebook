@@ -11,9 +11,9 @@ export const Filter =()=> {
 
 
     return (
-      <>
+      <div>
         <h2>Contacts</h2>
         <input type="text" onChange={handleFilter} />
-      </>
+      </div>
     );
 }
