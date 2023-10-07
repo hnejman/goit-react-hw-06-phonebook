@@ -12,7 +12,7 @@ export const Contacts = () => {
     const contact ={
       id: id,
       name: form.elements.name.value,
-      number: form. elements.number.value
+      number: form.elements.number.value
     }
     let contacts = localStorage.getItem("contacts");
     contacts = [...contacts, contact];
