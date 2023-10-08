@@ -1,14 +1,14 @@
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/actions';
+import { deleteContact } from '../../redux/actions';
 
 export const Contact = ({ contact }) => {
   const dispatch = useDispatch();
   const handleDelete = () => {
     const contacts = localStorage.getItem('contacts');
     console.log(contacts);
-    contacts.filter(element=>{
+    contacts.filter(element=>(
       element.id !== contact.id
-    });
+    ));
     localStorage.setItem("contacts", contacts);
     dispatch(deleteContact(contact.id));
   };
