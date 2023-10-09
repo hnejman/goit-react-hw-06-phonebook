@@ -18,7 +18,7 @@ export const addContact = (text, number, id) => {
 
   export const filterContacts = text =>{
     return{
-      type: 'contacts/name filter',
+      type: 'contacts/filter',
       payload: text,
     }
   }
